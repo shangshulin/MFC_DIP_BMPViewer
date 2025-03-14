@@ -31,10 +31,5 @@ protected:
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
 	DECLARE_MESSAGE_MAP()
-private:
-		CString m_strPath;
-		CString m_strPath2;
-public:
-	afx_msg void OnBnClickedButton1();
-	afx_msg void OnBnClickedButton2();
+
 };
