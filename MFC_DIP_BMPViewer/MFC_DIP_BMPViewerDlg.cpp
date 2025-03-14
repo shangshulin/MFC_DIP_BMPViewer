@@ -60,6 +60,7 @@ void CMFCDIPBMPViewerDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
 	DDX_Text(pDX, IDC_EDIT1, m_strPath);
+	DDX_Text(pDX, IDC_EDIT2, m_strPath2);
 }
 
 BEGIN_MESSAGE_MAP(CMFCDIPBMPViewerDlg, CDialogEx)
@@ -168,4 +169,8 @@ void CMFCDIPBMPViewerDlg::OnBnClickedButton1()
 void CMFCDIPBMPViewerDlg::OnBnClickedButton2()
 {
 	// TODO: 在此添加控件通知处理程序代码
+	UpdateData(TRUE);
+	m_strPath2 = m_strPath;
+	m_strPath = "";
+	UpdateData(FALSE);
 }
