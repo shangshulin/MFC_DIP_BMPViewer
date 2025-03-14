@@ -59,12 +59,15 @@ CMFCDIPBMPViewerDlg::CMFCDIPBMPViewerDlg(CWnd* pParent /*=nullptr*/)
 void CMFCDIPBMPViewerDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
+	DDX_Text(pDX, IDC_EDIT1, m_strPath);
 }
 
 BEGIN_MESSAGE_MAP(CMFCDIPBMPViewerDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_BN_CLICKED(IDC_BUTTON1, &CMFCDIPBMPViewerDlg::OnBnClickedButton1)
+	ON_BN_CLICKED(IDC_BUTTON2, &CMFCDIPBMPViewerDlg::OnBnClickedButton2)
 END_MESSAGE_MAP()
 
 
@@ -153,3 +156,16 @@ HCURSOR CMFCDIPBMPViewerDlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+
+void CMFCDIPBMPViewerDlg::OnBnClickedButton1()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	UpdateData(TRUE);
+	m_strPath = m_strPath + _T(".bmp");
+	UpdateData(FALSE);
+}
+
+void CMFCDIPBMPViewerDlg::OnBnClickedButton2()
+{
+	// TODO: 在此添加控件通知处理程序代码
+}
