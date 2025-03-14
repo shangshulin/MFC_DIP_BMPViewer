@@ -32,6 +32,7 @@ void CFILEWIN::DoDataExchange(CDataExchange* pDX)
 BEGIN_MESSAGE_MAP(CFILEWIN, CDialogEx)
 	ON_NOTIFY(TVN_SELCHANGED, IDC_MFCSHELLTREE1, &CFILEWIN::OnTvnSelchangedMfcshelltree1)
 	ON_NOTIFY(LVN_ITEMCHANGED, IDC_MFCSHELLLIST1, &CFILEWIN::OnLvnItemchangedMfcshelllist1)
+    ON_BN_CLICKED(IDC_BUTTON_CHOOSE, &CFILEWIN::OnBnClickedButtonChoose)
 END_MESSAGE_MAP()
 
 
@@ -55,18 +56,16 @@ void CFILEWIN::OnLvnItemchangedMfcshelllist1(NMHDR* pNMHDR, LRESULT* pResult)
 {
 	LPNMLISTVIEW pNMLV = reinterpret_cast<LPNMLISTVIEW>(pNMHDR);
 	// TODO: 在此添加控件通知处理程序代码
-	//CString file_path;
-	//for (int i = 0; i < m_shellList.GetItemCount(); i++)
-	//{
- //       if (m_shellList.GetItemState(i, LVIS_SELECTED) == LVIS_SELECTED)
-	//	{
-	//		m_shellList.GetItemPath(file_path,i);
-	//		MessageBox(file_path);
-	//		//MessageBox("已选择文件："+ file_path +"，请退出窗口后");
-
-	//		break;
-	//	}
-	//}
-
+    if (m_shellList.GetSafeHwnd() != NULL) {
+        for (int i = 0; i < m_shellList.GetItemCount(); i++) {
+            if (m_shellList.GetItemState(i, LVIS_SELECTED) == LVIS_SELECTED) {
+                m_shellList.GetItemPath(m_strFilePath, i);
+                break;
+            }
+        }
+    }
+    else {
+        // 处理 m_shellList 为 NULL 的情况
+    }
 	*pResult = 0;
 }
