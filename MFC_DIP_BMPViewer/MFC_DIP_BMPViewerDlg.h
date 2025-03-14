@@ -3,6 +3,8 @@
 //
 
 #pragma once
+#include "CFILEWIN.h"
+
 
 
 // CMFCDIPBMPViewerDlg 对话框
@@ -31,5 +33,8 @@ protected:
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
 	DECLARE_MESSAGE_MAP()
-
+private:
+	CFILEWIN m_filewin;
+public:
+	afx_msg void OnBnClickedButton1();
 };

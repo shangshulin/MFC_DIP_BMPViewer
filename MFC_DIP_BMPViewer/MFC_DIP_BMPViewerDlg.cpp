@@ -59,6 +59,7 @@ CMFCDIPBMPViewerDlg::CMFCDIPBMPViewerDlg(CWnd* pParent /*=nullptr*/)
 void CMFCDIPBMPViewerDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
+
 }
 
 BEGIN_MESSAGE_MAP(CMFCDIPBMPViewerDlg, CDialogEx)
@@ -66,6 +67,7 @@ BEGIN_MESSAGE_MAP(CMFCDIPBMPViewerDlg, CDialogEx)
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
 
+	ON_BN_CLICKED(IDC_BUTTON1, &CMFCDIPBMPViewerDlg::OnBnClickedButton1)
 END_MESSAGE_MAP()
 
 
@@ -156,3 +158,9 @@ HCURSOR CMFCDIPBMPViewerDlg::OnQueryDragIcon()
 
 
 
+
+void CMFCDIPBMPViewerDlg::OnBnClickedButton1()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	m_filewin.DoModal();
+}
