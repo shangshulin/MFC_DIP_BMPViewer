@@ -33,12 +33,6 @@
     <ClInclude Include="pch.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="CWIN1.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="CWIN2.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MFC_DIP_BMPViewer.cpp">
@@ -48,12 +42,6 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="pch.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="CWIN1.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="CWIN2.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

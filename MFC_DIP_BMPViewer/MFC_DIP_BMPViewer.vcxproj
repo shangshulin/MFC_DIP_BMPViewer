@@ -183,8 +183,6 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="CWIN1.h" />
-    <ClInclude Include="CWIN2.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="MFC_DIP_BMPViewer.h" />
     <ClInclude Include="MFC_DIP_BMPViewerDlg.h" />
@@ -193,8 +191,6 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CWIN1.cpp" />
-    <ClCompile Include="CWIN2.cpp" />
     <ClCompile Include="MFC_DIP_BMPViewer.cpp" />
     <ClCompile Include="MFC_DIP_BMPViewerDlg.cpp" />
     <ClCompile Include="pch.cpp">

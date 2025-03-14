@@ -3,8 +3,7 @@
 //
 
 #pragma once
-#include "CWIN1.h"
-#include "CWIN2.h"
+
 
 // CMFCDIPBMPViewerDlg 对话框
 class CMFCDIPBMPViewerDlg : public CDialogEx
@@ -33,11 +32,4 @@ protected:
 	afx_msg HCURSOR OnQueryDragIcon();
 	DECLARE_MESSAGE_MAP()
 
-private:
-	CWIN1 m_win1;
-	CWIN2 m_win2;
-
-public:
-	afx_msg void OnBnClickedButton1();
-	afx_msg void OnBnClickedButton2();
 };

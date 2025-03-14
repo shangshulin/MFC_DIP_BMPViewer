@@ -66,8 +66,6 @@ BEGIN_MESSAGE_MAP(CMFCDIPBMPViewerDlg, CDialogEx)
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
 
-	ON_BN_CLICKED(IDC_BUTTON1, &CMFCDIPBMPViewerDlg::OnBnClickedButton1)
-	ON_BN_CLICKED(IDC_BUTTON2, &CMFCDIPBMPViewerDlg::OnBnClickedButton2)
 END_MESSAGE_MAP()
 
 
@@ -103,7 +101,6 @@ BOOL CMFCDIPBMPViewerDlg::OnInitDialog()
 	SetIcon(m_hIcon, FALSE);		// 设置小图标
 
 	// TODO: 在此添加额外的初始化代码
-	m_win2.Create(IDD_DIALOG2);
 
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
 }
@@ -159,15 +156,3 @@ HCURSOR CMFCDIPBMPViewerDlg::OnQueryDragIcon()
 
 
 
-
-void CMFCDIPBMPViewerDlg::OnBnClickedButton1()
-{
-	// TODO: 在此添加控件通知处理程序代码
-	m_win1.DoModal(); 
-}
-
-void CMFCDIPBMPViewerDlg::OnBnClickedButton2()
-{
-	// TODO: 在此添加控件通知处理程序代码
-    m_win2.ShowWindow(SW_NORMAL);
-}
